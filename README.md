@@ -2,6 +2,7 @@
 A car stock management API built with **ASP.NET Core**, **FastEndpoints** and **SQLite**.
 
 
+
 ## Overview
 
 This project provides a RESTful API for managing car inventory across multiple dealerships.
@@ -16,6 +17,7 @@ Authenticated dealers can manage their own vehicles, including:
 *JWT authentication** and **dealer-level access control** ensure that each dealer can only access and manage their own vehicle inventory.
 
 
+
 ## Technologies Used
 
 - **Language & Runtime:** C# / .NET 10 and ASP.NET Core 10
@@ -24,6 +26,7 @@ Authenticated dealers can manage their own vehicles, including:
 - **Database:** SQLite via Microsoft.Data.Sqlite 10.0.12.
 - **Authentication:** Microsoft.AspNetCore.Authentication.JwtBearer 10.0.12 for JWT authentication.
 - **Password Hashing:** ASP.NET Core Identity `PasswordHasher<Dealer>` for password hashing and verification.
+
 
 
 ## API Routes & Directory Mapping
@@ -59,11 +62,11 @@ All endpoint routes are implemented using **FastEndpoints**. Except for the logi
 | DELETE | `/api/cars/{id}` | Removes a car from the dealer's stock | `Features/Cars/RemoveCar/RemoveCarEndpoint.cs` |
 
 
+
 ## Setup and Run
 ### Prerequisites
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
-
 
 ### Steps
 
@@ -88,6 +91,7 @@ All endpoint routes are implemented using **FastEndpoints**. Except for the logi
 The API will start using the configured launch settings.
 
 
+
 ## Authentication
 
 This API uses **JWT (JSON Web Token) authentication** to authenticate dealers.
@@ -100,7 +104,7 @@ Send a `POST` request to `/api/auth/login` with the following JSON body:
 ```json
 {
   "username": "dealer_a",
-  "password": "your-password"
+  "password": "aaaaaaaa"
 }
 ```
 
@@ -122,6 +126,7 @@ Use the following credentials to test the API:
 |---|---|
 | `dealer_a` | `aaaaaaaa` |
 | `dealer_b` | `bbbbbbbb` |
+
 
 
 ## Example API Requests
@@ -190,6 +195,7 @@ DELETE /api/cars/{car_id}
 Authorization: Bearer <your-jwt-token>
 
 
+
 ## Error Handling
 
 ### Common HTTP Status Codes
@@ -218,6 +224,7 @@ The API returns appropriate HTTP status codes to indicate the result of each req
 | `GET /api/cars/search` | Returns cars matching the search criteria within the dealer's inventory |
 | `PUT /api/cars/{id}/stock` | Returns an error if the car cannot be found or accessed |
 | `DELETE /api/cars/{id}` | Returns an error if the car cannot be found or accessed |
+
 
 
 ## Project Structure
