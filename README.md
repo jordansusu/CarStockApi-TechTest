@@ -104,7 +104,7 @@ Send a `POST` request to `/api/auth/login` with the following JSON body:
 ```json
 {
   "username": "dealer_a",
-  "password": "your-password"
+  "password": "aaaaaaaa"
 }
 ```
 
