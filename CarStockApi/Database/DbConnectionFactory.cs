@@ -9,7 +9,7 @@ public class DatabaseConnectionFactory : IDbConnectionFactory
 
     public DatabaseConnectionFactory()
     {
-        _connectionString = "Data Source=../Database/cars.db";
+        _connectionString = "Data Source=Database/cars.db";
     }
 
     public IDbConnection CreateConnection()
